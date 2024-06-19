@@ -5,4 +5,4 @@ os
 base64
 BytesIO
 time
-plotly
+plotly==5.22.0
