@@ -69,9 +69,10 @@ with st.sidebar:
 
         # Guardar la selección en el archivo CSV
         df = pd.read_csv(csv_file)
-        df = df.append({"Selecciones": selection["caption"]}, ignore_index=True)
+        new_row = pd.DataFrame({"Selecciones": [selection["caption"]]})
+        df = pd.concat([df, new_row], ignore_index=True)
         df.to_csv(csv_file, index=False)
-        del st.session_state.selected_image
+        del st.session_state.selected_image 
 
         
 # Mostrar resultados guardados
