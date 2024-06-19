@@ -2,12 +2,8 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import os
-import base64
-from io import BytesIO  # Importar BytesIO desde io
 import time
 import plotly.express as px
-
-
 
 
 # Archivo para guardar las selecciones
@@ -49,8 +45,6 @@ with st.sidebar:
     # Mostrar las imágenes y permitir la selección haciendo clic en cada una
     for imagen in imagenes:
         img = Image.open(imagen["file"])
-        img_base64 = pil_image_to_base64(img)
-        image_html = f'<img src="data:image/png;base64,{img_base64}" style="cursor:pointer;width:200px;height:200px;" />'
         if st.button(imagen["caption"], key=imagen["caption"]):
             st.session_state.selected_image = imagen
 

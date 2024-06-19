@@ -1,8 +1,6 @@
+plotly
 streamlit
 pandas
 Image
-os
-base64
-BytesIO
 time
-plotly==5.22.0
+
