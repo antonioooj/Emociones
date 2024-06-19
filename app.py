@@ -60,6 +60,9 @@ with st.sidebar:
         #time.sleep(2)
         #popup_placeholder.empty()
 
+        # Mostrar la imagen seleccionada
+        #st.image(selection["file"], caption=selection["caption"], use_column_width=True)
+    
         # Guardar la selección en el archivo CSV
         df = pd.read_csv(csv_file)
         new_row = pd.DataFrame({"Selecciones": [selection["caption"]]})
@@ -67,8 +70,6 @@ with st.sidebar:
         df.to_csv(csv_file, index=False)
         del st.session_state.selected_image 
 
-        # Refrescar la aplicación
-        st.experimental_rerun()
 
         
 # Mostrar resultados guardados
