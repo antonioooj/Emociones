@@ -39,7 +39,7 @@ with st.sidebar:
         buffered = BytesIO()
         image.save(buffered, format="PNG")
         return base64.b64encode(buffered.getvalue()).decode()
-        # Contenedor para el pop-up
+    # Contenedor para el pop-up
     popup_placeholder = st.empty()
 
     # Mostrar las imágenes y permitir la selección haciendo clic en cada una
@@ -58,8 +58,8 @@ with st.sidebar:
             st.image(selection["file"], caption=selection["caption"], use_column_width=True)
         
         # Esperar 2 segundos antes de limpiar el pop-up
-        time.sleep(2)
-        popup_placeholder.empty()
+        #time.sleep(2)
+        #popup_placeholder.empty()
 
         # Guardar la selección en el archivo CSV
         df = pd.read_csv(csv_file)
@@ -67,6 +67,9 @@ with st.sidebar:
         df = pd.concat([df, new_row], ignore_index=True)
         df.to_csv(csv_file, index=False)
         del st.session_state.selected_image 
+
+        # Refrescar la aplicación
+        st.experimental_rerun()
 
         
 # Mostrar resultados guardados
