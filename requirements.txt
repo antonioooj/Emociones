@@ -1,7 +1,8 @@
+BytesIO
+time
+plotly
 streamlit
 pandas
 Image
 base64
-BytesIO
-time
-plotly
+
