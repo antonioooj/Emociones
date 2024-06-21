@@ -27,8 +27,8 @@ st.title("Gráfico de emociones")
 imagenes = [
     {"file": "./Media/contento.png", "caption": "Contento"},
     {"file": "./Media/triste.png", "caption": "Triste"},
-    {"file": "./Media/contento.png", "caption": "Enfadado"},
-    {"file": "./Media/triste.png", "caption": "Aburrido"}
+    {"file": "./Media/enfadado.png", "caption": "Enfadado"},
+    {"file": "./Media/aburrido.png", "caption": "Aburrido"}
 ]
 
 with st.sidebar:
