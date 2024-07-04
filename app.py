@@ -93,7 +93,7 @@ if not df.empty:
     selection_counts['Seleccion'] = pd.Categorical(selection_counts['Seleccion'], categories=ordered_selections, ordered=True)
     
     # Colores personalizados
-    colors = ['#33FF57','#F3FF33','#FF5733','#3357FF']  # Ejemplo de colores, puedes personalizarlos
+    colors = ['#F3FF33','#3357FF','#FF5733','#33FF57']  # Ejemplo de colores, puedes personalizarlos
     
     fig = px.bar(selection_counts.sort_values('Seleccion'), x='Seleccion', y='Count', color='Seleccion',
                  color_discrete_sequence=colors, title="Distribución de Selecciones")
